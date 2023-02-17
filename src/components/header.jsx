@@ -6,10 +6,16 @@ export default function Header() {
     return (
         <header>
             <img src={InstagramLogo} alt="Instagram Logo" className="header-logo" />
-            <div className="header-right">
-                <a href="/#" id="header-modal"><img src={NewPost} alt=""/></a>
-                <img src={Notifications} alt="Notifications Button" />
-            </div>
+            <nav>
+                <ul className="nav-list">
+                    <li>
+                        <a href="/#" id="header-modal"><img src={NewPost} alt=""/></a>
+                    </li>
+                    <li>
+                        <a href="/notifcations"><img src={Notifications} alt="Notifications Button" /></a>
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 }

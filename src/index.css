@@ -23,11 +23,8 @@ header {
   margin-right: auto;
 }
 
-.header-right {
+.nav-list {
+  list-style-type: none;
   display: flex;
   column-gap: 16px;
-}
-
-#header-modal {
-  cursor: pointer;
 }
