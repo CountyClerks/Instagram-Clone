@@ -27,3 +27,7 @@ header {
   display: flex;
   column-gap: 16px;
 }
+
+#header-modal {
+  cursor: pointer;
+}

@@ -7,7 +7,7 @@ export default function Header() {
         <header>
             <img src={InstagramLogo} alt="Instagram Logo" className="header-logo" />
             <div className="header-right">
-                <img src={NewPost} alt=""/>
+                <a href="/#" id="header-modal"><img src={NewPost} alt=""/></a>
                 <img src={Notifications} alt="Notifications Button" />
             </div>
         </header>
