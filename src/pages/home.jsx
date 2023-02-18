@@ -1,12 +1,10 @@
-import Header from "../components/header"
-import Stories from "../components/stories"
+import Feed from "../components/feed"
 
 export default function Home() {
 
     return (
         <main>
-            <Header />
-            <Stories />
+            <Feed />
         </main>
     )
 }
