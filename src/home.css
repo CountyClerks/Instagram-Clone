@@ -1,0 +1,74 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-family: Roboto, sans-serif;
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 470px;
+    height: 55vh;
+    border: 1px solid rgba(219,219,219,255);
+    overflow: auto;
+}
+
+.login-logo {
+    width: 60%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    width: 100%;
+}
+
+.login-input {
+    background-color: rgba(250,250,250,255);
+    border: 1px solid rgba(219,219,219,255);
+    border-radius: 3px;
+    height: 30px;
+    text-indent: 5px;
+    width: 50%;
+    font-weight: 300;
+}
+
+.log-in-link {
+    font-weight: 500;
+    height: 35px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(76,180,248,255);
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+.signup-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(219,219,219,255);
+    height: 8vh;
+    margin-top: 1%;
+    column-gap: 10px;
+    max-width: 470px;
+    width: 100%;
+}
+
+.sign-up-link {
+    text-decoration: none;
+    color: rgba(0,149,247,255);
+    font-weight: 500;
+}
