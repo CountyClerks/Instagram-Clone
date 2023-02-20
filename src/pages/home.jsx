@@ -39,7 +39,7 @@ export default function Home() {
                     <Link to="/feed" className="log-in-button"><button type="submit"className="log-in-button">Log In</button></Link>
                 </form>
             </section>
-            <section className="signup-card">
+            <section className="need-account">
                 <p>Don't have an account?</p>
                 <Link to="/signup/" className="sign-up-link">Sign Up</Link>
             </section>

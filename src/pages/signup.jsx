@@ -23,27 +23,29 @@ export default function Signup() {
 
     return (
         <main>
-            <section className="signup-form">
+            <section className="signup-card">
                 <img src={InstagramLogo} alt="Instagram Logo" className="login-logo"/>
                 <form className="signup-form" onSubmit={signUp}>
                     <input 
                         type="email" 
                         placeholder="Email" 
+                        className="signup-input"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required/>
                     <input 
                         type="password" 
                         placeholder="Password" 
+                        className="signup-input"
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)}
                         required/>
-                    <button type="submit">Sign Up</button>
+                    <button type="submit" className="sign-up-button">Sign Up</button>
                 </form>
             </section>
             <section className="account-already">
                 <p>Have an account?</p>
-                <Link to="/">Log in</Link>
+                <Link to="/" className="login-link">Log in</Link>
             </section>
         </main>
     )
