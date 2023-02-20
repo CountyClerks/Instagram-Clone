@@ -21,27 +21,29 @@ export default function Home() {
 
     return (
         <main>
-            <section className="login-card">
-                <img src={InstagramLogo} alt="Instagram Logo" className="login-logo"/>
-                <form className="login-form" onSubmit={signIn}>
-                    <input 
-                        type="email" 
-                        placeholder="Email" 
-                        className="login-input"
-                        onChange={(e) => setEmail(e.target.value)}
-                        required/>
-                    <input 
-                        type="password" 
-                        placeholder="Password" 
-                        className="login-input" 
-                        onChange={(e) => setPassword(e.target.value)}
-                        required/>
-                    <Link to="/feed" className="log-in-button"><button type="submit"className="log-in-button">Log In</button></Link>
-                </form>
-            </section>
-            <section className="need-account">
-                <p>Don't have an account?</p>
-                <Link to="/signup/" className="sign-up-link">Sign Up</Link>
+            <section className="container">
+                <section className="login-card">
+                    <img src={InstagramLogo} alt="Instagram Logo" className="login-logo"/>
+                    <form className="login-form" onSubmit={signIn}>
+                        <input 
+                            type="email" 
+                            placeholder="Email" 
+                            className="login-input"
+                            onChange={(e) => setEmail(e.target.value)}
+                            required/>
+                        <input 
+                            type="password" 
+                            placeholder="Password" 
+                            className="login-input" 
+                            onChange={(e) => setPassword(e.target.value)}
+                            required/>
+                        <Link to="/feed" className="log-in-button"><button type="submit"className="log-in-button">Log In</button></Link>
+                    </form>
+                </section>
+                <section className="need-account">
+                    <p>Don't have an account?</p>
+                    <Link to="/signup" className="sign-up-link">Sign Up</Link>
+                </section>
             </section>
         </main>
     )

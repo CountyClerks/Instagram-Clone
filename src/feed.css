@@ -1,0 +1,76 @@
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 100%;
+}
+
+.post-card {
+    border: 1px solid rgba(219,219,219,255);
+    border-radius: 7px;
+    height: 65vh;
+    width: 25%;
+    min-width: 300px;
+    margin-top: 2%;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.post-profile-picture {
+    height: 35px;
+    width: 35px;
+    border-radius: 10%;
+    margin-right: 5px;
+}
+
+.post-user {
+    margin-right: auto;
+    font-size: .9rem;
+}
+
+.post-menu {
+    height: 30px;
+    width: 30px;
+}
+
+.post-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./img/ornamental-iron-sackerman.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70%;
+    width: 100%;
+}
+
+.post-interact {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.like-post, .comment-post, .share-post {
+    cursor: pointer;
+}
+
+.comment-post {
+    padding-bottom: 1px;
+}
+
+.share-post {
+    margin-right: auto;
+}
+
+.save-post {
+    margin-right: 15px;
+}

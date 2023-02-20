@@ -4,38 +4,3 @@ html {
 body {
   margin: 0;
 }
-
-header {
-  border-bottom: 1px solid rgba(219,219,219,255);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 44px;
-  padding: 0 16px;
-  margin-top: 1px;
-}
-
-.header-logo {
-  width: 103px;
-  height: 31px;
-  display: block;
-  margin-right: auto;
-}
-
-.nav-list {
-  list-style-type: none;
-  display: flex;
-  column-gap: 16px;
-}
-
-.feed {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width: 470px;
-  width: 70%;
-  /* height: 95vh; */
-  margin-left: auto;
-  margin-right: auto;
-}

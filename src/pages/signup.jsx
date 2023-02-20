@@ -40,7 +40,7 @@ export default function Signup() {
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)}
                         required/>
-                    <button type="submit" className="sign-up-button">Sign Up</button>
+                    <Link to="/feed" className="log-in-button"><button type="submit" className="sign-up-button">Sign Up</button></Link>
                 </form>
             </section>
             <section className="account-already">
