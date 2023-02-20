@@ -41,8 +41,9 @@ main {
     font-weight: 300;
 }
 
-.log-in-link {
+.log-in-button {
     font-weight: 500;
+    cursor: pointer;
     height: 35px;
     width: 50%;
     display: flex;
@@ -51,8 +52,8 @@ main {
     text-decoration: none;
     color: white;
     background-color: rgba(76,180,248,255);
+    border: none;
     border-radius: 5px;
-    margin-top: 1%;
 }
 
 .signup-card {
