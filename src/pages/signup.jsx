@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import InstagramLogo from "../img/instagram-name.svg"
 import { auth } from "../services/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -9,17 +9,18 @@ export default function Signup() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate();
 
     const signUp = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-
+                console.log(userCredential);
             }).catch((error) => {
                 console.log(error);
             })
+        navigate("/feed")
     }
-
 
     return (
         <main>
@@ -40,7 +41,7 @@ export default function Signup() {
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)}
                         required/>
-                    <Link to="/feed" className="log-in-button"><button type="submit" className="sign-up-button">Sign Up</button></Link>
+                    <button type="submit" className="sign-up-button">Sign Up</button>
                 </form>
             </section>
             <section className="account-already">

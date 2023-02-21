@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react"
 
 export default function Home() {
-
+    const [user, setUser] = useState()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
 
@@ -13,6 +13,7 @@ export default function Home() {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
+                setUser(userCredential)
                 console.log(userCredential)
             }).catch((error) => {
                 console.log(error)
@@ -37,7 +38,7 @@ export default function Home() {
                             className="login-input" 
                             onChange={(e) => setPassword(e.target.value)}
                             required/>
-                        <Link to="/feed" className="log-in-button"><button type="submit"className="log-in-button">Log In</button></Link>
+                        <Link to="/feed" className="log-in-button" value={user}><button type="submit"className="log-in-button">Log In</button></Link>
                     </form>
                 </section>
                 <section className="need-account">

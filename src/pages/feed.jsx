@@ -5,10 +5,13 @@ import Like from "../img/Like.svg"
 import Comment from "../img/Comment.svg"
 import SharePost from "../img/Share Post.svg"
 import SavePost from "../img/Save Post.svg"
+import useFirebaseAuth from "../services/auth"
 
 
 //Placeholder information until styling is done
 export default function Feed() {
+    const user = useFirebaseAuth();
+    console.log(user)
     return (
         <main>
             <section className="header">
