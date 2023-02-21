@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import InstagramLogo from "../img/instagram-name.svg"
 import { auth } from "../services/firebase"
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react"
@@ -24,7 +23,7 @@ export default function Home() {
         <main>
             <section className="container">
                 <section className="login-card">
-                    <img src={InstagramLogo} alt="Instagram Logo" className="login-logo"/>
+                    <img src="./img/instagram-name.svg" alt="Instagram Logo" className="login-logo"/>
                     <form className="login-form" onSubmit={signIn}>
                         <input 
                             type="email" 

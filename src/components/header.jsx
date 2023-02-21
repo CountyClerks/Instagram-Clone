@@ -1,18 +1,17 @@
-import InstagramLogo from "../img/instagram-name.svg"
-import Notifications from "../img/Notifications.svg"
-import NewPost from "../img/New-post.svg"
-
 export default function Header() {
     return (
         <header>
-            <a href="/"><img src={InstagramLogo} alt="Instagram Logo" className="header-logo" /></a>
+            <a href="/"><img src="./img/instagram-name.svg" alt="Instagram Logo" className="header-logo" /></a>
             <nav>
                 <ul className="nav-list">
                     <li>
-                        <a href="/" id="header-modal"><img src={NewPost} alt=""/></a>
+                        <a href="/" id="header-modal"><img src="./img/New-post.svg" alt=""/></a>
                     </li>
                     <li>
-                        <a href="/notifcations"><img src={Notifications} alt="Notifications Button" /></a>
+                        <a href="/notifcations"><img src="./img/Notifications.svg" alt="Notifications Button" /></a>
+                    </li>
+                    <li>
+                        <button className="header-profile"></button>
                     </li>
                 </ul>
             </nav>

@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import InstagramLogo from "../img/instagram-name.svg"
 import { auth } from "../services/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -25,7 +24,7 @@ export default function Signup() {
     return (
         <main>
             <section className="signup-card">
-                <img src={InstagramLogo} alt="Instagram Logo" className="login-logo"/>
+                <img src="./img/instagram-name.svg" alt="Instagram Logo" className="login-logo"/>
                 <form className="signup-form" onSubmit={signUp}>
                     <input 
                         type="email" 

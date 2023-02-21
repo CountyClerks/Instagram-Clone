@@ -1,3 +1,8 @@
+p {
+    margin: 0;
+}
+
+/* MAIN FEED */
 .feed {
     display: flex;
     flex-direction: column;
@@ -7,10 +12,13 @@
     min-width: 100%;
 }
 
+/* INDIVIDUAL POSTS */
+
 .post-card {
     border: 1px solid rgba(219,219,219,255);
+    box-shadow: 0px 7px 27px -12px rgba(0,0,0,0.75);
     border-radius: 7px;
-    height: 65vh;
+    height: 75vh;
     width: 25%;
     min-width: 300px;
     margin-top: 2%;
@@ -19,7 +27,7 @@
 .post-header {
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 .post-profile-picture {
@@ -43,7 +51,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./img/ornamental-iron-sackerman.jpg");
+    background-image: url("../public/img/ornamental-iron-sackerman.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,9 +67,11 @@
     margin-left: 15px;
 }
 
-.like-post, .comment-post, .share-post {
+.like-post, .comment-post, .share-post, .save-post, .post-menu, .submit-comment {
     cursor: pointer;
 }
+
+/* POST INTERACTION */
 
 .comment-post {
     padding-bottom: 1px;
@@ -72,5 +82,58 @@
 }
 
 .save-post {
+    margin-right: 15px;
+}
+
+.post-information {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    margin-top: 2%;
+    row-gap: 10px;
+}
+
+.post-likes {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+/* COMMENTS */
+
+.post-comments {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: .9rem;
+    margin-bottom: auto;
+}
+
+.comment-user {
+    font-weight: 600;
+}
+
+.add-comment {
+    display: flex;
+    align-items: center;
+}
+
+.input-comment {
+    border: none;
+    border-top: 1px solid rgba(239,239,239,255);
+    width: 80%;
+    height: 20px;
+    margin-right: auto;
+}
+
+.input-comment:focus {
+    outline: none;
+}
+
+.submit-comment {
+    border: none;
+    background: white;
+    color: rgba(23,149,246,255);
+    font-size: 1rem;
+    font-weight: 500;
     margin-right: 15px;
 }

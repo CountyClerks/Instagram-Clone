@@ -1,40 +1,45 @@
 import Header from "../components/header"
-import img from "../img/bird.png"
-import postMenu from "../img/post-menu.png"
-import Like from "../img/Like.svg"
-import Comment from "../img/Comment.svg"
-import SharePost from "../img/Share Post.svg"
-import SavePost from "../img/Save Post.svg"
 import useFirebaseAuth from "../services/auth"
-
 
 //Placeholder information until styling is done
 export default function Feed() {
     const user = useFirebaseAuth();
-    console.log(user)
+    
     return (
         <main>
             <section className="header">
-                <Header></Header>
+                <Header value={user}></Header>
             </section>
             <section className="feed">
                 <div className="post-card" id="0">
                     <div className="post-header">
-                        <img src={img} alt=""  className="post-profile-picture"/>
+                        <img src="./img/bird.png" alt=""  className="post-profile-picture"/>
                         <p className="post-user">user1</p>
-                        <img src={postMenu} alt="" className="post-menu"/>
+                        <img src="./img/post-menu.png" alt="" className="post-menu"/>
                     </div>
                     <div className="post-image">
                     </div>
                     <div className="post-interact">
-                        <img src={Like} alt="" className="like-post"/>
-                        <img src={Comment} alt="" className="comment-post"/>
-                        <img src={SharePost} alt="" className="share-post"/>
-                        <img src={SavePost} alt="" className="save-post"/>
+                        <img src="./img/Like.svg" alt="" className="like-post"/>
+                        <img src="./img/Comment.svg" alt="" className="comment-post"/>
+                        <img src="./img/Share Post.svg" alt="" className="share-post"/>
+                        <img src="./img/Save Post.svg" alt="" className="save-post"/>
                     </div>
-                </div>
-                <div className="post-card" id="1">
-                    <p>user2</p>
+                    <div className="post-information">
+                        <p className="post-likes">10 Likes</p>
+                        <div className="post-comments">
+                            <p className="comment-user">User2</p>
+                            <p className="comment">This is a great post!</p>
+                        </div>
+                        <div className="post-comments">
+                            <p className="comment-user">User3</p>
+                            <p className="comment">This is a great post!</p>
+                        </div>
+                        <div className="add-comment">
+                            <input type="text" placeHolder="Add a comment.." className="input-comment"/>
+                            <button type="button" className="submit-comment">Post</button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
