@@ -4,11 +4,10 @@ import useFirebaseAuth from "../services/auth"
 //Placeholder information until styling is done
 export default function Feed() {
     const user = useFirebaseAuth();
-    
     return (
         <main>
             <section className="header">
-                <Header value={user}></Header>
+                <Header></Header>
             </section>
             <section className="feed">
                 <div className="post-card" id="0">

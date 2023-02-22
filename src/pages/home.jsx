@@ -2,9 +2,11 @@ import { Link } from "react-router-dom"
 import { auth } from "../services/firebase"
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react"
+import useFirebaseAuth from "../services/auth";
 
 export default function Home() {
-    // const [user, setUser] = useState()
+    const user = useFirebaseAuth()
+    console.log(user);
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
 
