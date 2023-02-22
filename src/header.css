@@ -27,6 +27,16 @@ header {
     column-gap: 16px;
 }
 
+.header-add-post {
+    cursor: pointer;
+    border: none;
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    background-image: url("../public/img/New-post.svg");
+    background-size: contain;
+}
+
 .header-profile {
     cursor: pointer;
     border: none;
@@ -35,4 +45,38 @@ header {
     background-color: white;
     background-image: url("../public/img/user.png");
     background-size: contain;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: grey;
+    display: flex;
+}
+
+.add-post-modal {
+    margin: auto;
+    width: 40%;
+    max-width: 40rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+
+.add-post-button {
+    cursor: pointer;
+    background-color: rgba(0,149,246,255);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px;
 }

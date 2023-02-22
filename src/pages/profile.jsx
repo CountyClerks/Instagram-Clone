@@ -1,7 +1,10 @@
+import Header from "../components/header"
 export default function Profile() {
     return (
-        <div>
-            
-        </div>
+        <main>
+            <section className="header">
+                <Header />
+            </section>
+        </main>
     )
 }

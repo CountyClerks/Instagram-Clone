@@ -12,8 +12,7 @@ export default function Home() {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                setUser(userCredential)
-                console.log(userCredential)
+
             }).catch((error) => {
                 console.log(error)
             })

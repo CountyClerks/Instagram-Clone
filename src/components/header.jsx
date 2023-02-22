@@ -7,7 +7,7 @@ export default function Header() {
             <nav>
                 <ul className="nav-list">
                     <li>
-                        <a href="/" id="header-modal"><img src="./img/New-post.svg" alt=""/></a>
+                        <button  type="button" className="header-add-post"></button>
                     </li>
                     <li>
                         <a href="/notifcations"><img src="./img/Notifications.svg" alt="Notifications Button" /></a>
@@ -17,6 +17,14 @@ export default function Header() {
                     </li>
                 </ul>
             </nav>
+            <div className="modal-container">
+                <section className="add-post-modal">
+                    <div className="modal-header">
+                        <p>Create New Post</p>
+                    </div>
+                    <button className="add-post-button">Select Image</button>
+                </section>
+            </div>
         </header>
     )
 }
