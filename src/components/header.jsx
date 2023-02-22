@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Header() {
     return (
         <header>
@@ -11,7 +13,7 @@ export default function Header() {
                         <a href="/notifcations"><img src="./img/Notifications.svg" alt="Notifications Button" /></a>
                     </li>
                     <li>
-                        <button className="header-profile"></button>
+                        <Link to="/profile" className="header-profile-button"><button className="header-profile"></button></Link>
                     </li>
                 </ul>
             </nav>
