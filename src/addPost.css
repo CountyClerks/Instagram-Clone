@@ -1,0 +1,22 @@
+.add-post-modal {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 36px -20px rgba(0,0,0,0.75);
+}
+
+.add-post-button {
+    cursor: pointer;
+    background-color: rgba(0,149,246,255);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px;
+}
