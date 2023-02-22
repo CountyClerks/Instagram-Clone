@@ -36,7 +36,7 @@ export default function Feed() {
                             <p className="comment">This is a great post!</p>
                         </div>
                         <div className="add-comment">
-                            <input type="text" placeHolder="Add a comment.." className="input-comment"/>
+                            <input type="text" placeholder="Add a comment.." className="input-comment"/>
                             <button type="button" className="submit-comment">Post</button>
                         </div>
                     </div>
