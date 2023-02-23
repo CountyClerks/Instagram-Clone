@@ -1,12 +1,14 @@
 import React, { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { auth, db } from "../services/firebase"
+import { useAuth } from "../services/auth"
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { addDoc, collection } from "firebase/firestore"
+import {doc, addDoc, collection, setDoc } from "firebase/firestore"
 
 
 export default function Signup() {
-
+    const user = useAuth(auth)
+    console.log(user)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [name, setUsername] = useState('')
@@ -16,7 +18,16 @@ export default function Signup() {
         e.preventDefault()
         createUserWithEmailAndPassword(auth, email, password)
             .then((res) => {
-                console.log(res.user)
+                const userDoc = doc(db, `users/${res.user.uid}`)
+                function writeNewDoc() {
+                    const docData = {
+                        username: `${res.user.email}`,
+                        displayName: name,
+                        bio: '',
+                    };
+                    setDoc(userDoc, docData)
+                }
+                writeNewDoc()
             })
             .catch(err => console.log(err))
         navigate("/feed")

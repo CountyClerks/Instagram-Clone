@@ -1,10 +1,12 @@
 import Header from "../components/header"
 import useFirebaseAuth from "../services/auth"
+import { db, auth } from "../services/firebase"
+import { addDoc, collection, doc, setDoc } from "firebase/firestore"
 
 //Placeholder information until styling is done
 export default function Feed() {
     const user = useFirebaseAuth();
-    console.log(user)
+
     return (
         <main>
             <section className="header">
