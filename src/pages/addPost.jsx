@@ -1,11 +1,15 @@
 import Header from "../components/header"
 import { useState } from "react"
-import { storage } from "../services/firebase"
+import { useAuth } from "../services/auth"
+import { storage, auth } from "../services/firebase"
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
+import format from "date-fns/format"
 
 export default function NewPost () {
-
+    const user = useAuth(auth)
+    console.log(user)
     const [file, setFile] = useState("")
+    const formatDate = format(new Date(), "yyyy-MM-dd'T'HH:mm:ss'Z'")
 
     function handleFile(e) {
         setFile(e.target.files[0])
@@ -15,7 +19,8 @@ export default function NewPost () {
         if(!file) {
             alert("Please choose a file before proceeding.")
         }
-        const storageRef = ref(storage, `/files/${file.name}`)
+        const bucket = `${user.authUser.uid}/${formatDate}.jpg`
+        const storageRef = ref(storage, bucket)
         const uploadTask = uploadBytesResumable(storageRef, file);
 
         uploadTask.on(

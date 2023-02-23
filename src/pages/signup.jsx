@@ -1,30 +1,39 @@
 import React, { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { auth } from "../services/firebase"
+import { auth, db } from "../services/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { addDoc, collection } from "firebase/firestore"
 
 
 export default function Signup() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [name, setUsername] = useState('')
     const navigate = useNavigate();
 
-    const signUp = (e) => {
-        e.preventDefault();
+    const register = (e) => {
+        e.preventDefault()
         createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-            }).catch((error) => {
-                console.log(error);
+            .then((res) => {
+                console.log(res.user)
             })
+            .catch(err => console.log(err))
         navigate("/feed")
     }
-
+    
     return (
         <main>
             <section className="signup-card">
                 <img src="./img/instagram-name.svg" alt="Instagram Logo" className="login-logo"/>
-                <form className="signup-form" onSubmit={signUp}>
+                <form className="signup-form" onSubmit={register}>
+                    <input 
+                        type="text"
+                        placeholder="Username"
+                        className="signup-input"
+                        value={name}
+                        onChange={(e) => setUsername(e.target.value)} 
+                        required/>
                     <input 
                         type="email" 
                         placeholder="Email" 

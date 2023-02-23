@@ -4,6 +4,7 @@ import useFirebaseAuth from "../services/auth"
 //Placeholder information until styling is done
 export default function Feed() {
     const user = useFirebaseAuth();
+    console.log(user)
     return (
         <main>
             <section className="header">
