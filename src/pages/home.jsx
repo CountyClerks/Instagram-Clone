@@ -1,20 +1,27 @@
 import { Link } from "react-router-dom"
 import { auth } from "../services/firebase"
-import { signInWithEmailAndPassword } from "firebase/auth";
+// import { getAuth } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth"
 import { useState } from "react"
-import useFirebaseAuth from "../services/auth";
+import useFirebaseAuth from "../services/auth"
+// import useFirebaseAuth from "../services/auth";
 
 export default function Home() {
-    const user = useFirebaseAuth()
-    console.log(user);
+    // const user = useFirebaseAuth()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
-    const signIn = async (e) => {
-        e.preventDefault();
-        const userCredential = await signInWithEmailAndPassword(auth, email, password)
-        console.log(userCredential)
+    // const auth = useFirebaseAuth()
+    
+    const signIn = async (e) => {  
+        e.preventDefault()  
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password)
+            console.log(userCredential.user)
+        } catch (error) {
+            console.log(error)
+        }
     }
+
 
     return (
         <main>

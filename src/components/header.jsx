@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function Header() {
     return (
         <header>
-            <Link to="/"><img src="./img/instagram-name.svg" alt="Instagram Logo" className="header-logo" /></Link>
+            <Link to="/feed"><img src="./img/instagram-name.svg" alt="Instagram Logo" className="header-logo" /></Link>
             <nav>
                 <ul className="nav-list">
                     <li>
