@@ -1,11 +1,11 @@
 import Header from "../components/header"
-import useFirebaseAuth from "../services/auth"
+import useFirebaseAuth, { useAuth } from "../services/auth"
 import { auth } from "../services/firebase"
 import { signOut } from "firebase/auth"
 import { useNavigate } from "react-router-dom"
 
 export default function Profile() {
-    const currentUser = useFirebaseAuth();
+    const currentUser = useAuth(auth);
     console.log(currentUser.authUser)
     const navigate = useNavigate();
 

@@ -7,7 +7,7 @@ import format from "date-fns/format"
 
 export default function NewPost () {
     const user = useAuth(auth)
-    console.log(user)
+    console.log(user.authUser)
     const [file, setFile] = useState("")
     const formatDate = format(new Date(), "yyyy-MM-dd'T'HH:mm:ss'Z'")
 

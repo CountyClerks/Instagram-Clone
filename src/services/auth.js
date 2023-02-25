@@ -34,7 +34,6 @@ export default function useFirebaseAuth() {
         authUser,
         isLoading
     }
-
 }
 
 export function AuthUserProvider({ children }) {

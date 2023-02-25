@@ -16,8 +16,8 @@ import { AuthUserProvider } from "./services/auth"
 
 function App() {
   return (
-    <AuthUserProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthUserProvider>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/feed" element={<Feed/>}/>
@@ -27,8 +27,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/new-post" element={<NewPost />} />
         </Routes>
-      </BrowserRouter>
-    </AuthUserProvider>
+      </AuthUserProvider>
+    </BrowserRouter>
   );
 }
 
