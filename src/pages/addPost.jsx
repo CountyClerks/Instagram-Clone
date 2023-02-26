@@ -12,12 +12,12 @@ export default function NewPost () {
     const [file, setFile] = useState("")
     const [caption, setCaption] = useState("")
     const formatDate = format(new Date(), "yyyy-MM-dd'T'HH:mm:ss'Z'")
-    const imageDoc = doc(db, `users/${user.authUser.uid}`, 'images', `${formatDate}`)
 
     function writeToDoc() {
-
+        const imageDoc = doc(db, `users/${user.authUser.uid}`, 'images', `${formatDate}`)
         const imageData = {
-            caption: caption
+            caption: caption,
+            url: `images/${user.authUser.uid}/${formatDate}`
         }
         setDoc(imageDoc, imageData)
     }
