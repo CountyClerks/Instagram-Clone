@@ -1,5 +1,5 @@
 import Header from "../components/header"
-import useFirebaseAuth, { useAuth } from "../services/auth"
+import { useAuth } from "../services/auth"
 import { auth, db } from "../services/firebase"
 import { signOut } from "firebase/auth"
 import { useNavigate } from "react-router-dom"
@@ -8,13 +8,11 @@ import { useState } from "react"
 
 export default function Profile() {
     const currentUser = useAuth(auth);
-    console.log(currentUser.authUser)
     const navigate = useNavigate();
     const [displayName, setDisplayName] = useState('')
 
     const docRef = doc(db, "users", currentUser.authUser.uid)
     const docSnap = getDoc(docRef).then(docSnap => {
-        // console.log(docSnap.data().displayName)
         setDisplayName(docSnap.data().displayName)
     })
 
@@ -34,7 +32,7 @@ export default function Profile() {
                 <Header />
             </section>
             <section className="profile-container">
-                <div className="profile-buttons">
+                <div className="profile-info">
                     <h1>Current User: {displayName}</h1>
                     <button type="button" onClick={signingOut}>Sign Out</button>
                 </div>

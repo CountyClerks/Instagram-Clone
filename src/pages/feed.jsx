@@ -1,15 +1,14 @@
-import Header from "../components/header"
-import useFirebaseAuth from "../services/auth";
-import { auth, storage } from "../services/firebase"
-import { useAuth } from "../services/auth"
-import { ref, getDownloadURL } from "firebase/storage"
+import Header from '../components/header'
+import { auth, storage } from '../services/firebase'
+import { useAuth } from '../services/auth'
+import { ref, getDownloadURL } from 'firebase/storage'
+// import { useState } from 'react'
 
 //Placeholder information until styling is done
 export default function Feed() {
     const user = useAuth()
 
-    const storagePath = ref(storage, 'images/')
-    
+
     return (
         <main>
             <section className="header">
