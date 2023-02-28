@@ -1,7 +1,7 @@
 # Instagram Clone
 ## [Live Demo](https://instagram-clone-cddec.web.app/)
 
-  A functional photo sharing social media app based on popular social media app Instagram. Users are able to complete basic functionalities of a social media app including: sign up, log in, sign out, and uploading images with captions.
+  A functional photo sharing social media app based on popular social media app Instagram. Users are able to complete basic functionalities of a social media app including: sign up, log in, sign out, and uploading images with captions. Made with React, Firebase: Authentication, Firestore, Hosting, and Storage. A big challenge for me through building this app was interfacing through Firebase. This app is my first time trying to use a back-end service for data, and I was able to learn a lot about handling data through out the app and passing authentication through using React context.
   
 ## Site Walkthrough
   Testing login: 
