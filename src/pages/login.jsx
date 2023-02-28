@@ -38,7 +38,6 @@ export default function Home() {
                             onChange={(e) => setPassword(e.target.value)}
                             required/>
                         <button type="submit"className="log-in-button">Log In</button>
-                        {/* <Link to="/feed" className="log-in-button"><button type="submit"className="log-in-button">Log In</button></Link> */}
                     </form>
                 </section>
                 <section className="need-account">

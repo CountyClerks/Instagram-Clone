@@ -6,7 +6,7 @@ import "./addPost.css"
 import "./profile.css"
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./pages/home"
+import Login from "./pages/login"
 import Notifications from "./pages/notifications"
 import Profile from "./pages/profile"
 import Messages from "./pages/messages"
@@ -20,7 +20,7 @@ function App() {
     <BrowserRouter>
       <AuthUserProvider>
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" element={<Login/>}/>
           <Route path="/feed" element={<Feed/>}/>
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/profile" element={<Profile />} />
