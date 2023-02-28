@@ -8,7 +8,6 @@ import {doc, addDoc, collection, setDoc } from "firebase/firestore"
 
 export default function Signup() {
     const user = useAuth(auth)
-    console.log(user)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [name, setUsername] = useState('')

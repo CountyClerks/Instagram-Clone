@@ -39,7 +39,7 @@ p {
 
 .post-user {
     margin-right: auto;
-    font-size: .9rem;
+    font-size: 1rem;
 }
 
 .post-menu {
@@ -51,7 +51,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../public/img/ornamental-iron-sackerman.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,7 +89,7 @@ p {
     flex-direction: column;
     margin-left: 3%;
     margin-top: 2%;
-    row-gap: 10px;
+    row-gap: 8px;
 }
 
 .post-likes {
@@ -106,6 +105,22 @@ p {
     column-gap: 5px;
     font-size: .9rem;
     margin-bottom: auto;
+}
+
+.post-caption {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.post-caption > h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.post-caption > p {
+    font-size: .9rem;
+    margin: 0;
 }
 
 .comment-user {
