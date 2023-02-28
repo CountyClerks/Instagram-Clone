@@ -61,7 +61,7 @@ export default function NewPost () {
                     onChange={handleFile}/>
                 <input 
                     type="text" 
-                    className=""
+                    className="add-caption"
                     name="caption" 
                     id="caption" 
                     placeholder="Add Image Caption" 
