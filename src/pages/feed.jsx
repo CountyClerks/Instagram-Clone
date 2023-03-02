@@ -14,7 +14,6 @@ export default function Feed() {
                 const data = doc.data()
                 return data
             })
-            console.log(docs)
             setDocArray(docs)
         })()
     }, [])
